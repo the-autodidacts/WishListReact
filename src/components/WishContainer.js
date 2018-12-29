@@ -25,7 +25,7 @@ class WishContainer extends React.Component {
     return(
       <div className="album py-5 bg-light">
         <div className="container">
-              <WishList wishes={this.state.wishes}/>
+            <WishList wishes={this.state.wishes}/>
         </div>
       </div>
     )

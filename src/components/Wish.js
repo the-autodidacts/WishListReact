@@ -13,7 +13,7 @@ const Wish = props => {
               <h5 className="card-title">{props.wish.name}: ${props.wish.price}.00</h5>
               <p className="card-text">{props.wish.description}</p>
               <p>Ranking: {props.wish.ranking}</p>
-              <button type="button" className="btn-lg">Received!</button>
+              <button type="button" className="btn-lg">Received</button>
             </div>
           </div>
         </div>
