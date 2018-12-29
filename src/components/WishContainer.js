@@ -1,6 +1,6 @@
 import React from 'react';
 import WishList from './WishList'
-import WishFrom from './WishForm'
+import WishForm from './WishForm'
 
 const wishesEndpoint = 'http://localhost:3000/api/v1/wishes'
 class WishContainer extends React.Component {
@@ -23,8 +23,10 @@ class WishContainer extends React.Component {
 
   render() {
     return(
-      <div className="container">
-        <WishList wishes={this.state.wishes}/>
+      <div className="album py-5 bg-light">
+        <div className="container">
+              <WishList wishes={this.state.wishes}/>
+        </div>
       </div>
     )
   }
