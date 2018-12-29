@@ -9,7 +9,7 @@ const WishList = (props) => {
   })
 
   return (
-    <div>
+    <div className="row">
       {mappedWishes}
    </div>
   )

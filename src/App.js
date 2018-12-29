@@ -5,7 +5,7 @@ import WishContainer from './components/WishContainer'
 import HolidayContainer from './components/HolidayContainer'
 import Banner from './components/Banner'
 import Search from './components/Search'
-import WishForm from './components/WishForm'
+// import WishForm from './components/WishForm'
 
 
 class App extends Component {
@@ -19,8 +19,7 @@ class App extends Component {
           </div>
           <div className="col-10">
             <div className="col-14">
-              <Search /> <br />
-              <WishForm />
+              <Search />
               <WishContainer />
             </div>
           </div>

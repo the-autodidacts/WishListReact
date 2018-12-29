@@ -16,7 +16,7 @@ class HolidayContainer extends React.Component {
   render() {
     return(
       <div>
-        <h1 className="holiday-h1">Holidays</h1>
+        <h1 className="holiday-h1">Gifts by Holiday</h1>
           <HolidayList holidays={this.state.holidays}/>
       </div>
     )

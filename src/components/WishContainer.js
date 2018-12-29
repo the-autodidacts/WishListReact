@@ -5,10 +5,15 @@ import WishForm from './WishForm'
 const wishesEndpoint = 'http://localhost:3000/api/v1/wishes'
 class WishContainer extends React.Component {
 
-  // set initial state
-  state = {
-    wishes: []
+  constructor() {
+    super()
+
+    this.state = { wishes: [] }
   }
+  // set initial state
+  // state = {
+  //   wishes: []
+  // }
 
   // lifecycle method
   componentDidMount() {
@@ -38,7 +43,7 @@ class WishContainer extends React.Component {
     })
     .then(r => r.json())
     .then(data => {
-      console.log(data);
+      this.setState({ wishes: [data, ...this.state.wishes]})
     })
   }
 
@@ -46,10 +51,10 @@ class WishContainer extends React.Component {
 
   render() {
     return(
-      <div className="album py-5 bg-light">
+      <div className="album py-16 bg-light" style={{width: '100%'}}>
         <div className="container">
-            <WishList wishes={this.state.wishes}/>
-            <WishForm handlePost={this.handlePost} />
+          <WishForm handlePost={this.handlePost} />
+          <WishList wishes={this.state.wishes}/>
         </div>
       </div>
     )
