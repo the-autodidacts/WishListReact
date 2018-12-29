@@ -39,6 +39,7 @@ class WishForm extends React.Component {
 
   handleChange = (event) => {
     // console.log(e.target.value);
+    event.persist()
     this.setState({
       [event.target.name]:event.target.value
     })

@@ -26,12 +26,13 @@ class WishContainer extends React.Component {
       })
   }
 
+
   handlePost = (newWish) => {
     // console.log("u hit handle post");
     fetch(wishesEndpoint, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json', Accept: 'application/json'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         name: newWish.name,
@@ -42,8 +43,9 @@ class WishContainer extends React.Component {
       })
     })
     .then(r => r.json())
-    .then(data => {
-      this.setState({ wishes: [data, ...this.state.wishes]})
+    .then(newWishObject => {
+      // const wishes = Object.assign({}, this.state.wishes, newWishObject)
+      this.setState({ wishes: [...this.state.wishes, newWishObject]}, () => console.log("update state is", this.state))
     })
   }
 
