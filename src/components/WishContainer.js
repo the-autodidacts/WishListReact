@@ -23,7 +23,9 @@ class WishContainer extends React.Component {
 
   render() {
     return(
-      <div>hi!</div>
+      <div className="container">
+        <WishList wishes={this.state.wishes}/>
+      </div>
     )
   }
 

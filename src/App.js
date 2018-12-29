@@ -7,8 +7,15 @@ import WishContainer from './components/WishContainer'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <WishContainer />
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            HOLIDAYS SHOULD GO HERE
+          </div>
+          <div className="col-9">
+            <WishContainer />
+          </div>
+        </div>
       </div>
     );
   }
