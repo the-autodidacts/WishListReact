@@ -21,30 +21,28 @@ class WishContainer extends React.Component {
       })
   }
 
-  // handlePost = (newWish) => {
-  //   // console.log("u hit handle post");
-  //   fetch(wishesEndpoint, {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json', Accept: 'application/json'
-  //     },
-  //     body: JSON.stringify({
-  //       name: newWish.name,
-  //       description: newWish.description,
-  //       image: newWish.image,
-  //       ranking: newWish.ranking,
-  //       price: newWish.price
-  //     })
-  //   })
-  //   .then(r => r.json())
-  //   .then(data => {
-  //     console.log(data);
-  //   })
-  // }
-
-  handlePost = () => {
-    console.log("tirggered submit");
+  handlePost = (newWish) => {
+    // console.log("u hit handle post");
+    fetch(wishesEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json', Accept: 'application/json'
+      },
+      body: JSON.stringify({
+        name: newWish.name,
+        description: newWish.description,
+        image: newWish.image,
+        ranking: newWish.ranking,
+        price: newWish.price
+      })
+    })
+    .then(r => r.json())
+    .then(data => {
+      console.log(data);
+    })
   }
+
+
 
   render() {
     return(

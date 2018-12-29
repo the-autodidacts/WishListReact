@@ -1,6 +1,7 @@
 import React from 'react';
 
 const holidaysEndpoint = 'http://localhost:3000/api/v1/holidays'
+const wishesEndpoint = 'http://localhost:3000/api/v1/wishes'
 class WishForm extends React.Component {
 
   constructor(props) {
@@ -45,7 +46,24 @@ class WishForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.props.handlePost(this.state)
+    // this.props.handlePost(this.state)
+    fetch(wishesEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json', Accept: 'application/json'
+      },
+      body: JSON.stringify({
+        name: this.state.name,
+        description: this.state.description,
+        image: this.state.image,
+        ranking: this.state.ranking,
+        price: this.state.price
+      })
+    })
+    .then(r => r.json())
+    .then(data => {
+      console.log(data);
+    })
   }
 
   render() {
